@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    padding: 4px;
+}
+
+.form__title{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.navbar__form {
+    display: flex;
+    width: 170px;
+    padding: 4px 6px;
+    margin: 8px 0 8px 10px;
+    border-radius: 4px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #198754;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.form__button {
+    width: 100%;
+}
+
+.form__button + .form__button {
+    margin-left: 14px;
+}
+.form__button__add {
+    width: 180px;
+}
