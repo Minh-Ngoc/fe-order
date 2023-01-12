@@ -14,8 +14,8 @@ function ProductAdd() {
     const navigate = useNavigate();
     const [ten, setTen] = useState('');
     const [gia, setGia] = useState('');
+    const [loaisp, setLoaiSP] = useState('');
     
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -39,6 +39,7 @@ function ProductAdd() {
             data: {
                 ten, 
                 gia,
+                loaisp,
             }
         };
 
@@ -63,18 +64,18 @@ function ProductAdd() {
     return ( 
         <div className={cx('container-fluid')}>
             <div className='pt-5 pb-3 text-center'>
-                <span className={cx('form__title')}>MÓN ĂN</span>
+                <span className={cx('form__title')}>THÊM SẢN PHẨM VÀO MENU</span>
             </div>
         
             <Form onSubmit={(e) => handleSubmit(e)}>
                 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Tên món ăn:</Form.Label>
+                    <Form.Label>Tên sản phẩm:</Form.Label>
                     <Form.Control 
                         type="text" 
                         name='ten' 
                         value={ten}
-                        placeholder="VD: Chả..." 
+                        placeholder="VD: Chả, pepsi..." 
                         onChange={(e) => setTen(e.target.value)}
                     />
                 </Form.Group>
@@ -89,8 +90,17 @@ function ProductAdd() {
                         onChange={e => setGia(e.target.value)}
                     />
                 </Form.Group>
+
+                <Form.Group className={cx('form__control')} controlId="formBasicPassword">
+                    <Form.Label>Sản phẩm: </Form.Label>
+                    <Form.Select defaultValue="Chọn sản phẩm..." name='loaisp' onChange={(e) => setLoaiSP(e.target.value)}>
+                        <option disabled>Chọn sản phẩm...</option>
+                        <option value='Đồ ăn'> Đồ ăn </option>
+                        <option value='Nước'> Nước </option>
+                    </Form.Select>
+                </Form.Group>
                 
-                <div className='d-flex pt-2 pb-2'>
+                <div className='d-flex pt-4 pb-2'>
                     <Button className={cx('form__button')} variant="primary" type="submit">
                         Thêm món ăn mới
                     </Button>

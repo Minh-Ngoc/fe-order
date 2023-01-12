@@ -1,0 +1,59 @@
+.form__control {
+    margin-bottom: 20px;
+}
+.form__control + .form__control {
+    margin-top: 20px;
+} 
+.form__quantity {
+    position: relative;
+
+    button.btn__quantity {
+        width: 80px !important;
+        position: absolute;
+        top: 0;
+    }
+    button.btn__quantity__down {
+
+    }
+    button.btn__quantity__up {
+        right: 0;
+    }
+}
+
+select + label {
+    margin-top: 10px;
+}
+
+
+.container__table {
+    width: calc(100%/3);
+    display: inline-block;
+    position: relative;
+    
+    :hover {
+        background-color: #bdd4f84a;
+    }
+    
+    a {
+
+        img {
+            width: 60%;
+            margin: 0 20%;
+        }
+    }
+
+    span {
+        position: absolute;
+        left: 22px;
+        top: 20px;      
+        font-size: 20px;  
+        color: #5300ff;
+        font-weight: 800;
+        background-color: aliceblue;
+        padding: 4px;
+    }
+}
+
+.container__table + .container__table {
+    margin-top: 40px;
+}

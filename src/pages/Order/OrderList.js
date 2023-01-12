@@ -1,13 +1,37 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from './Home.module.scss';
+import styles from './Order.module.scss';
 import classNames from 'classnames/bind';
+
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
+
 
 const cx = classNames.bind(styles);
 
-function Home() {
+function OrderList() {
+    const [orderList, setOrderList] = useState([]);
 
-    const numberTable = 12;
+    useEffect(() => {
+        const API_PRODUCT_ADD = {
+            method: 'GET',
+            url: 'http://localhost:6969/order/list',
+        };
+
+        axios(API_PRODUCT_ADD)
+            .then(result => {
+                setOrderList(result.data.order)
+            })
+            .catch(err => {
+                if(err) {
+                    return toast.error("Không có món ăn nào được tạo!", {
+                        position: toast.POSITION.TOP_RIGHT,
+                    })
+                }
+            })
+    }, []);
+
+    const numberTable = !orderList ? 0 : orderList.map(orderlist => orderList.isPay === null).length;
 
     const tableList = () => {
         const arr = [];
@@ -34,8 +58,9 @@ function Home() {
             <div className={cx('order__list')}>
                 {!tableList ? '' : tableList()}
             </div>
+            <ToastContainer style={{width: '250px'}}/>
         </div>
      );
 }
 
-export default Home;
+export default OrderList;

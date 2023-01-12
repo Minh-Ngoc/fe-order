@@ -3,7 +3,7 @@ import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
-import styles from './Bill.module.scss';
+import styles from './Order.module.scss';
 import classNames from 'classnames/bind';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

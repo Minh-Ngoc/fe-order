@@ -38,11 +38,11 @@ function Product() {
     return ( 
         <div className={cx('wrapper')}>
             <div className='pt-5 pb-3 text-center'>
-                <span className={cx('form__title')}>DANH SÁCH MÓN ĂN</span>
+                <span className={cx('form__title')}>MENU</span>
             </div>
             <div className={cx('navbar__form')}>
                 <FontAwesomeIcon icon={faPlus} />
-                <Link to='/product/add' className={cx('form__button', 'form__button__add')}>
+                <Link to='/product/create' className={cx('form__button', 'form__button__add')}>
                     Thêm món ăn mới
                 </Link>
             </div>
@@ -50,7 +50,8 @@ function Product() {
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Tên món ăn</th>
+                        <th>Tên SP</th>
+                        <th>Loại SP</th>
                         <th>Hình ảnh</th>
                         <th>Giá</th>
                         <th>Sửa</th>
@@ -62,6 +63,7 @@ function Product() {
                         <tr className="align-middle" key={index}>
                             <td> {++index} </td>
                             <td> {sanpham.ten} </td>
+                            <td> {sanpham.loaisp} </td>
                             <td> {!sanpham.hinhanh ? 'Không có hình' : sanpham.hinhanh} </td>
                             <td> {sanpham.gia} </td>
                             <td> 
