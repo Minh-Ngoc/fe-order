@@ -41,7 +41,7 @@ function OrderList() {
             <div key={index} className={cx('container__table')}>
                 <Link to={`/order/detail/ban-so-${arr.soban}`} key={index} state={{id: arr._id}}>
                     <img src='https://cdn-icons-png.flaticon.com/512/5696/5696492.png'/>
-                    <span>Bàn số {arr.soban}</span>
+                    <span>{arr.soban}</span>
                 </Link>
             </div>  
         ))

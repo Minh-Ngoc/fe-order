@@ -18,13 +18,19 @@
 
     span {
         position: absolute;
-        left: 22px;
-        top: 20px;      
-        font-size: 18px;  
-        color: #5300ff;
+        left: 37px;
+        top: 14px;
+        display: flex;
+        width: 46px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 18px;
+        color: #0d2fff;
         font-weight: 600;
-        background-color: aliceblue;
-        padding: 4px;
+        background-color: #fffdfb;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
     }
 }
 

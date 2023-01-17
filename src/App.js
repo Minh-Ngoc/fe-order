@@ -35,7 +35,7 @@ function App() {
             })
           }
         </Routes>
-        <ToastContainer style={{width: '300px', top: '20px', left: '124px'}}/>
+        <ToastContainer style={{minWidth: '300px', maxWidth: '320px', top: '20px'}}/>
       </div>
     </Router>
   );

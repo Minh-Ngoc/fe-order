@@ -48,13 +48,19 @@ select + label {
 
     span {
         position: absolute;
-        left: 22px;
-        top: 20px;      
-        font-size: 20px;  
-        color: #5300ff;
-        font-weight: 800;
-        background-color: aliceblue;
-        padding: 4px;
+        left: 37px;
+        top: 14px;
+        display: flex;
+        width: 46px;
+        height: 44px;
+        border-radius: 50%;
+        font-size: 18px;
+        color: #0d2fff;
+        font-weight: 600;
+        background-color: #fffdfb;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
     }
 }
 
