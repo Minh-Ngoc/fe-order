@@ -44,3 +44,75 @@ body {
     width: 180px;
 }
 
+/* iphone X , XS, 11 Pro, 12 Mini */
+@media
+(width: 375px) and 
+(height: 812px) {
+    .children {
+        height: 100%;
+    }
+    .wrapper {
+        height: 812px;
+        position: relative;
+    }
+    
+    .navbar {
+        padding: 14px 0;
+        background-color: rgb(12, 133, 231);
+
+        a {
+            color: #fff;
+            padding: 7px;
+            text-decoration: none;
+        }
+    }
+}
+
+/* iphone XS Max, 11 Pro Max */
+@media
+(width: 414px) and 
+(height: 896px) { 
+    .children {
+        height: 100%;
+    }
+    .wrapper {
+        height: 896px;
+        position: relative;
+    }
+    
+    .navbar {
+        padding: 14px 0;
+        background-color: rgb(12, 133, 231);
+
+        a {
+            color: #fff;
+            padding: 11px;
+            text-decoration: none;
+        }
+    }
+}
+
+ /* iphone 12 Pro Max */
+ @media
+(width: 428px) and 
+(height: 926px) { 
+    .children {
+        height: 100%;
+        margin-bottom: 18px;
+    }
+    .wrapper {
+        height: 926px;
+        position: relative;
+    }
+    
+    .navbar {
+        padding: 14px 0;
+        background-color: rgb(12, 133, 231);
+
+        a{
+            padding: 12px;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
