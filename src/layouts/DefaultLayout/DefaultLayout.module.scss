@@ -1,0 +1,77 @@
+/* iphone X , XS, 11 Pro, 12 Mini */ 
+// (height: 812px) 
+// (height: 896px) 
+// (height: 926px)
+@media
+(min-width: 375px) {
+    .children {
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 14px;
+    }
+    .wrapper {
+        height: 812px;
+        position: relative;
+    }
+    
+    .navbar {
+        padding: 14px 0;
+        background-color: rgb(12, 133, 231);
+
+        a {
+            color: #fff;
+            padding: 7px;
+            text-decoration: none;
+        }
+    }
+}
+
+/* iphone XS Max, 11 Pro Max */
+@media
+(min-width: 414px) { 
+    .children {
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 14px;
+    }
+    .wrapper {
+        height: 896px;
+        position: relative;
+    }
+    
+    .navbar {
+        padding: 14px 0;
+        background-color: rgb(12, 133, 231);
+
+        a {
+            color: #fff;
+            padding: 11px;
+            text-decoration: none;
+        }
+    }
+}
+
+ /* iphone 12 Pro Max */
+ @media
+(min-width: 428px) { 
+    .children {
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 14px;
+    }
+    .wrapper {
+        height: 926px;
+        position: relative;
+    }
+    
+    .navbar {
+        padding: 14px 0;
+        background-color: rgb(12, 133, 231);
+
+        a{
+            padding: 12px;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}

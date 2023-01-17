@@ -71,7 +71,7 @@ function OrderDetail() {
         <>
             <div style={ {opacity: style, backgroundColor: bgcolor ? bgcolor : ''} } className={cx('wrapper') + ' d-flex flex-column justify-content-between' } >
                 <div className='col-12'>
-                    <div className='pt-5 pb-3 text-center'>
+                    <div className='pt-4 pb-3 text-center'>
                         <span className={cx('form__title')}>BÀN SỐ {number[number.length -1]} </span>
                     </div>
                     <div className='row mt-2 mb-2'>

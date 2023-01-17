@@ -91,7 +91,7 @@ function OrderCreate() {
      
     return ( 
         <div className={cx('container-fluid')}>
-            <div className='pt-5 pb-3 text-center'>
+            <div className='pt-3 pb-3 text-center'>
                 <span className={cx('form__title')}>BÀN SỐ {number[number.length -1]} </span>
             </div>
         

@@ -28,7 +28,7 @@ function Home() {
 
     return ( 
         <div className="container-fluid">
-            <div className='pt-5 pb-3 text-center'>
+            <div className='pt-3 pb-3 text-center'>
                 <span className={cx('form__title')}>SƠ ĐỒ BÀN ĂN</span>
             </div>
             <div className={cx('order__list')}>
