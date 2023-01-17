@@ -6,7 +6,7 @@
 (min-width: 375px) {
     .children {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         margin-bottom: 14px;
     }
     .wrapper {
@@ -15,6 +15,8 @@
     }
     
     .navbar {
+        position: fixed;
+        bottom: 0;
         padding: 14px 0;
         background-color: rgb(12, 133, 231);
 
@@ -31,7 +33,7 @@
 (min-width: 414px) { 
     .children {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         margin-bottom: 14px;
     }
     .wrapper {
@@ -40,6 +42,8 @@
     }
     
     .navbar {
+        position: fixed;
+        bottom: 0;
         padding: 14px 0;
         background-color: rgb(12, 133, 231);
 
@@ -56,7 +60,7 @@
 (min-width: 428px) { 
     .children {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
         margin-bottom: 14px;
     }
     .wrapper {
@@ -65,6 +69,8 @@
     }
     
     .navbar {
+        position: fixed;
+        bottom: 0;
         padding: 14px 0;
         background-color: rgb(12, 133, 231);
 
