@@ -9,7 +9,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const cx = classNames.bind(styles);
 
@@ -49,9 +49,7 @@ function Product() {
             <Table responsive className='text-center'>
                 <thead>
                     <tr>
-                        <th>#</th>
                         <th>Tên SP</th>
-                        <th>Loại SP</th>
                         <th>Hình ảnh</th>
                         <th>Giá</th>
                         <th>Sửa</th>
@@ -61,9 +59,7 @@ function Product() {
                 <tbody>
                     {!data ? '' : data.map((sanpham, index) => (
                         <tr className="align-middle" key={index}>
-                            <td> {++index} </td>
                             <td> {sanpham.ten} </td>
-                            <td> {sanpham.loaisp} </td>
                             <td> {!sanpham.hinhanh ? 'Không có hình' : sanpham.hinhanh} </td>
                             <td> {sanpham.gia} </td>
                             <td> 
@@ -89,7 +85,7 @@ function Product() {
                         </tr>
                     ))}
                 </tbody>
-                </Table>
+            </Table>
         </div>
      );
 }

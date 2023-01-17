@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Product.module.scss';
 import classNames from 'classnames/bind';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import axios from 'axios';
 
@@ -15,6 +15,11 @@ function ProductAdd() {
     const [ten, setTen] = useState('');
     const [gia, setGia] = useState('');
     const [loaisp, setLoaiSP] = useState('');
+
+    const VND = new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+    });
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -109,8 +114,6 @@ function ProductAdd() {
                     </Button>
                 </div>
             </Form>    
-
-            <ToastContainer style={{width: '250px'}}/>
         </div>
     );
 }

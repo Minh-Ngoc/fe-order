@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Order.module.scss';
 import classNames from 'classnames/bind';
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 
 
@@ -31,18 +31,17 @@ function OrderList() {
             })
     }, []);
 
-    const numberTable = !orderList ? 0 : orderList.map(orderlist => orderList.isPay === null).length;
+    // const numberTable = !orderList ? 0 : orderList.map(orderList => orderList.isPay === null).length;
 
     const tableList = () => {
         const arr = [];
-        for(let i = 1; i <= numberTable; i++) {
-            arr.push(i);
-        }
+        orderList.map(order => order.isPay === null ? arr.push(order) : '')
+        
         return arr.map((arr, index) => (
             <div key={index} className={cx('container__table')}>
-                <Link to={`/order/create/ban-so-${arr}`}>
+                <Link to={`/order/detail/ban-so-${arr.soban}`} key={index} state={{id: arr._id}}>
                     <img src='https://cdn-icons-png.flaticon.com/512/5696/5696492.png'/>
-                    <span>Bàn số {arr}</span>
+                    <span>Bàn số {arr.soban}</span>
                 </Link>
             </div>  
         ))
@@ -51,14 +50,18 @@ function OrderList() {
     
 
     return ( 
-        <div className="container-fluid">
+        <div className={cx('wrapper') + " container-fluid"}>
             <div className='pt-5 pb-3 text-center'>
                 <span className={cx('form__title')}>SƠ ĐỒ BÀN ĂN</span>
             </div>
             <div className={cx('order__list')}>
-                {!tableList ? '' : tableList()}
+                {!orderList ? '' : tableList()}
             </div>
-            <ToastContainer style={{width: '250px'}}/>
+            <div className={cx('new__order')}>
+                <Link className={cx('btn__new__order')}>
+                    <img src='https://cdn3.iconfinder.com/data/icons/rest/30/add_order-512.png'></img>
+                </Link>
+            </div>
         </div>
      );
 }

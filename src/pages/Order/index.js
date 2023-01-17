@@ -9,7 +9,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const cx = classNames.bind(styles);
 

@@ -2,16 +2,17 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import styles from './Order.module.scss';
 import classNames from 'classnames/bind';
 import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+
 import axios from 'axios';
 
 const cx = classNames.bind(styles);
 
-function OrderAdd(props) {
+function OrderCreate() {
     const params = useParams();
     const navigate = useNavigate();
     const [productList, setProductList] = useState([]);
@@ -61,39 +62,39 @@ function OrderAdd(props) {
 
         const API_PRODUCT_ADD = {
             method: 'POST',
-            url: `http://localhost:6969/order/add/${props.showModal.orderId}`,
+            url: 'http://localhost:6969/order/create',
             data: {
+                soban: number[number.length -1],
                 sanphamId: sanphamId, 
                 soluong: soluong,
+                date: new Date(),
             }
         };
 
         axios(API_PRODUCT_ADD)
             .then(result => {
                 setSoLuong('');
-                return toast.success("Thêm món ăn thành công!", {
+                navigate('/order/list');
+                return toast.success("Thêm order thành công!", {
                     position: toast.POSITION.TOP_RIGHT,
                 })
             })
             .catch(err => {
                 if(err) {
-                    return toast.error("Thêm món ăn thất bại!", {
+                    return toast.error("Thêm order thất bại!", {
                         position: toast.POSITION.TOP_RIGHT,
                     })
                 }
             })
 
     }
-
-    const handleShowModal = () => {
-        props.showModal.showModal(false);
-        props.showModal.setStyleModal(1);
-        props.showModal.HandleBgcolor('#fff');
-    }
      
     return ( 
-        <div className={cx('modal__order__add')}>
-    
+        <div className={cx('container-fluid')}>
+            <div className='pt-5 pb-3 text-center'>
+                <span className={cx('form__title')}>BÀN SỐ {number[number.length -1]} </span>
+            </div>
+        
             <Form onSubmit={(e) => handleSubmit(e)}>
                 
                 <Form.Group className={cx('form__control')} controlId="formBasicPassword">
@@ -146,7 +147,7 @@ function OrderAdd(props) {
                 </Form.Group>
                 
                 <div className='d-flex pt-2 pb-2'>
-                    <Button className={cx('form__button')} variant="danger" type="button" onClick={() => handleShowModal()}>
+                    <Button className={cx('form__button')} variant="danger" type="button" onClick={() => navigate(-1)}>
                         Trở về
                     </Button>
                     <Button className={cx('form__button')} variant="primary" type="submit">
@@ -158,4 +159,4 @@ function OrderAdd(props) {
     );
 }
 
-export default OrderAdd;
+export default OrderCreate;
