@@ -20,11 +20,7 @@ function Product() {
     useEffect(() => {
         function callAPI() {
             const API_PRODUCT_LIST = {
-                headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    Accept: 'application/json',
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json'},
                 method: 'GET',
                 url: 'https://server-order.netlify.app/sanpham/list',
             };
