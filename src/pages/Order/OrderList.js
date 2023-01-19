@@ -14,6 +14,10 @@ function OrderList() {
 
     useEffect(() => {
         const API_PRODUCT_ADD = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
             method: 'GET',
             url: ' https://server-order.netlify.app/order/list',
         };

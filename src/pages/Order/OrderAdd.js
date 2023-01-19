@@ -25,6 +25,10 @@ function OrderAdd(props) {
 
     useEffect(() => {
         const API_PRODUCT_ADD = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
             method: 'GET',
             url: ' https://server-order.netlify.app/sanpham/list',
         };
@@ -60,6 +64,10 @@ function OrderAdd(props) {
         } 
 
         const API_PRODUCT_ADD = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
             method: 'POST',
             url: `http://localhost:6969/order/add/${props.showModal.orderId}`,
             data: {

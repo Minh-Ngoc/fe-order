@@ -39,6 +39,10 @@ function ProductAdd() {
         } 
 
         const API_PRODUCT_ADD = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
             method: 'POST',
             url: ' https://server-order.netlify.app/sanpham/create',
             data: {

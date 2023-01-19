@@ -37,6 +37,10 @@ function OrderDetail() {
 
     useEffect(() => {
         const API_ORDER_DETAIL = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
             method: 'GET',
             url: `http://localhost:6969/order/detail/${orderId}`,
         };

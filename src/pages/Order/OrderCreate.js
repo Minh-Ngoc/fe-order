@@ -26,6 +26,10 @@ function OrderCreate() {
 
     useEffect(() => {
         const API_PRODUCT_ADD = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
             method: 'GET',
             url: ' https://server-order.netlify.app/sanpham/list',
         };
@@ -61,6 +65,10 @@ function OrderCreate() {
         } 
 
         const API_PRODUCT_ADD = {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
             method: 'POST',
             url: ' https://server-order.netlify.app/order/create',
             data: {
