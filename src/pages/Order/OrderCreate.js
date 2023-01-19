@@ -27,7 +27,7 @@ function OrderCreate() {
     useEffect(() => {
         const API_PRODUCT_ADD = {
             method: 'GET',
-            url: 'https://server-order.netlify.app/sanpham/list',
+            url: 'server-order.netlify.app/sanpham/list',
         };
 
         axios(API_PRODUCT_ADD)
@@ -62,7 +62,7 @@ function OrderCreate() {
 
         const API_PRODUCT_ADD = {
             method: 'POST',
-            url: 'https://server-order.netlify.app/order/create',
+            url: 'server-order.netlify.app/order/create',
             data: {
                 soban: number[number.length -1],
                 sanphamId: sanphamId, 
