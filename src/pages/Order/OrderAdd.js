@@ -26,7 +26,7 @@ function OrderAdd(props) {
     useEffect(() => {
         const API_PRODUCT_ADD = {
             method: 'GET',
-            url: 'server-order.netlify.app/sanpham/list',
+            url: ' https://server-order.netlify.app/sanpham/list',
         };
 
         axios(API_PRODUCT_ADD)
