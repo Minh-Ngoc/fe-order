@@ -20,7 +20,6 @@ function Product() {
     useEffect(() => {
         function callAPI() {
             const API_PRODUCT_LIST = {
-                headers: { 'Content-Type': 'application/json'},
                 method: 'GET',
                 url: 'https://server-order.netlify.app/sanpham/list',
             };
