@@ -15,7 +15,7 @@ function OrderList() {
     useEffect(() => {
         const API_PRODUCT_ADD = {
             method: 'GET',
-            url: 'http://localhost:6969/order/list',
+            url: 'https://server-order.netlify.app/order/list',
         };
 
         axios(API_PRODUCT_ADD)

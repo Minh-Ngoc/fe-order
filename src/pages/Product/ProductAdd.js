@@ -40,7 +40,7 @@ function ProductAdd() {
 
         const API_PRODUCT_ADD = {
             method: 'POST',
-            url: 'http://localhost:6969/sanpham/create',
+            url: 'https://server-order.netlify.app/sanpham/create',
             data: {
                 ten, 
                 gia,

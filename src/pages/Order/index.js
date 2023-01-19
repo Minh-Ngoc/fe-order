@@ -21,7 +21,7 @@ function Product() {
         function callAPI() {
             const API_PRODUCT_LIST = {
                 method: 'GET',
-                url: 'http://localhost:6969/sanpham/list',
+                url: 'https://server-order.netlify.app/sanpham/list',
             };
             axios(API_PRODUCT_LIST)
                 .then(result => {
